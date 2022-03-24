@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+}
+
+:root {
+  --border-body: #a68d63;
+  --box1color: #f7f7f7;
+  --box2color: #ffffff;
+  --rouge: #d95952;
+}
+
+html {
+  font-size: 62.5%; /*1 rem vaut 10px*/
+}
+
+body {
+  width: 100%;
+  font-size: 1.4rem; /*soit 10px*/
+}
+
+#contenu {
+  width: 100%;
+  height: 100vh;
+  border: 20px outset var(--border-body);
+  display: flex;
+  position: absolute;
+}
+
+.player1 {
+  background-color: var(--box1color);
+}
+
+#player {
+  width: 50%;
+}
+
+#score_player {
+  height: 50%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 4rem;
+}
+
+#score_player p {
+  color: var(--rouge);
+  font-size: 10rem;
+}
+
+#current {
+  height: 15%;
+  width: 25%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--rouge);
+  margin: 24% auto;
+  font-size: 2rem;
+}
+
+#current p:nth-child(2n) {
+  color: white;
+  font-size: 5rem;
+}
+
+#navgame {
+  margin: auto;
+  width: 20%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0);
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+
+#navgame i {
+  color: #d95952;
+  transition: 0.5s;
+}
+
+#navgame span {
+  color: black;
+}
+
+#navgame i:hover {
+  font-size: 3.5rem;
+  cursor: pointer;
+}
+
+/******************************DICE*******************************/
+.dice {
+  padding: 4px;
+  background-color: white;
+  width: 104px;
+  height: 104px;
+  border-radius: 10%;
+  box-shadow: 0px 0px 50px 26px rgba(0, 0, 0, 0.31);
+  transition: 3s;
+}
+
+.dice:hover {
+  width: 120px;
+  height: 120px;
+  transform: rotate(1080deg);
+  cursor: pointer;
+}
+
+.dot {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--rouge);
+}
+.first-face {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
